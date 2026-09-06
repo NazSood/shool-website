@@ -1,0 +1,6 @@
+*.py
+*.bak
+generatedvehicleimages/
+shoolcommandcenterfieldapplicationimages/
+shoolroboticsindustryapplicationimages/
+preview/
