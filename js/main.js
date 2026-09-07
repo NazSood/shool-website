@@ -16,3 +16,14 @@ if (navToggle && mainNav) {
     });
   });
 }
+
+// Hero banner: crossfade carousel through the stacked .hero-banner-img slides
+const heroBannerSlides = document.querySelectorAll('.hero-banner-img');
+if (heroBannerSlides.length > 1) {
+  let activeSlideIndex = 0;
+  setInterval(() => {
+    heroBannerSlides[activeSlideIndex].classList.remove('is-active');
+    activeSlideIndex = (activeSlideIndex + 1) % heroBannerSlides.length;
+    heroBannerSlides[activeSlideIndex].classList.add('is-active');
+  }, 5000);
+}

@@ -179,6 +179,8 @@ h2 { font-size: clamp(28px, 4vw, 40px); }
   width: auto;
   max-width: none;
   object-fit: contain;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 88%, transparent 100%),
                        linear-gradient(0deg, transparent 0%, black 14%, black 100%);
   -webkit-mask-composite: source-in;
@@ -186,6 +188,10 @@ h2 { font-size: clamp(28px, 4vw, 40px); }
               linear-gradient(0deg, transparent 0%, black 14%, black 100%);
   mask-composite: intersect;
 }
+/* Carousel: all banner images stack in the exact same spot; only the
+ * .is-active one is visible, JS swaps which one has the class every few
+ * seconds for a slow crossfade. See js/main.js. */
+.hero-banner-img.is-active { opacity: 1; }
 .hero-banner-fade-bottom {
   position: absolute;
   left: 0; right: 0; bottom: 0;
@@ -470,7 +476,8 @@ h2 { font-size: clamp(28px, 4vw, 40px); }
 @media (max-width: 900px) {
   .product-inner, .cc-inner, .ft-inner, .tech-inner, .footer-inner { grid-template-columns: 1fr !important; }
   .feature-list { margin-top: 24px; }
-  .hero-banner-img { opacity: 0.35; right: -15%; }
+  .hero-banner-img { right: -15%; }
+  .hero-banner-img.is-active { opacity: 0.35; }
   .hero-copy { max-width: 100%; }
   .workflow-steps { align-items: stretch; }
   .wf-step { width: 100%; max-width: 320px; }
