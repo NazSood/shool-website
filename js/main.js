@@ -16,13 +16,3 @@ if (navToggle && mainNav) {
     });
   });
 }
-
-// Contact form: placeholder submit handler until a real backend endpoint exists
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert("Thanks — we'll be in touch shortly.");
-    contactForm.reset();
-  });
-}
