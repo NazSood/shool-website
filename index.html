@@ -286,7 +286,9 @@
       <p>Rochester, MI, USA</p>
       <p><a href="mailto:info@shoolrobotics.com">info@shoolrobotics.com</a></p>
     </div>
-    <form class="footer-form" id="contactForm">
+    <form class="footer-form" id="contactForm" action="https://formsubmit.co/info@shoolrobotics.com" method="POST">
+      <input type="hidden" name="_subject" value="New inquiry from Shool Robotics website">
+      <input type="hidden" name="_next" value="https://shoolrobotics.com/#contact">
       <input type="text" name="name" placeholder="Name" required>
       <input type="text" name="company" placeholder="Company">
       <input type="email" name="email" placeholder="Email" required>
