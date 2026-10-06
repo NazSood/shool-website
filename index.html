@@ -157,53 +157,70 @@
       <p class="eyebrow center">Applications</p>
       <h2 class="center">Solving Real Challenges Across Industries</h2>
       <div class="app-cards">
-        <div class="app-card" style="background-image:url(images/app-construction.jpg)">
+        <div class="app-card" style="background-image:url(images/app-construction.jpg)" data-detail="On active job sites, Shool-ZERO handles routine inspection walks, documents daily progress, and holds a security watch overnight &mdash; without putting a person in a hazardous or hard-to-reach area. Its rugged tracks move through scaffolding, unfinished floors, and tight site corridors other platforms can't.">
           <div class="app-card-body">
             <strong>Construction</strong>
             <span>Inspection &bull; Progress Monitoring &bull; Site Security</span>
           </div>
         </div>
-        <div class="app-card" style="background-image:url(images/app-industrial.jpg)">
+        <div class="app-card" style="background-image:url(images/app-industrial.jpg)" data-detail="Inside plants and facilities, Shool-ZERO inspects assets, pipework, and equipment in confined or hazardous zones, flags anomalies for maintenance teams, and keeps a continuous safety watch &mdash; reducing the need for personnel to enter high-risk areas.">
           <div class="app-card-body">
             <strong>Industrial</strong>
             <span>Asset Inspection &bull; Safety Monitoring &bull; Hazardous Environments</span>
           </div>
         </div>
-        <div class="app-card" style="background-image:url(images/app-utilities.jpg)">
+        <div class="app-card" style="background-image:url(images/app-utilities.jpg)" data-detail="Shool-ZERO patrols substations, pump stations, and other critical infrastructure, performing remote visual inspections of equipment condition and access points so field teams can respond to issues before they become failures.">
           <div class="app-card-body">
             <strong>Utilities &amp; Infrastructure</strong>
             <span>Critical Asset Monitoring &bull; Remote Inspection</span>
           </div>
         </div>
-        <div class="app-card" style="background-image:url(images/app-security.jpg)">
+        <div class="app-card" style="background-image:url(images/app-security.jpg)" data-detail="Shool-ZERO extends perimeter coverage with mobile, remotely operated patrols &mdash; closing visual gaps between fixed cameras, investigating alerts in real time, and giving security teams eyes on a situation before committing personnel.">
           <div class="app-card-body">
             <strong>Security</strong>
             <span>Perimeter Monitoring &bull; Threat Detection &bull; Situational Awareness</span>
           </div>
         </div>
-        <div class="app-card" style="background-image:url(images/app-oilgas.jpg)">
+        <div class="app-card" style="background-image:url(images/app-oilgas.jpg)" data-detail="Across pipelines, well sites, and flare stacks, Shool-ZERO performs visual inspection and monitoring passes in remote or hazardous locations, cutting down how often personnel need to travel to or enter dangerous areas.">
           <div class="app-card-body">
             <strong>Oil &amp; Gas</strong>
             <span>Pipeline Inspection &bull; Flare Monitoring &bull; Remote Site Access</span>
           </div>
         </div>
-        <div class="app-card" style="background-image:url(images/app-publicsafety.jpg)">
+        <div class="app-card" style="background-image:url(images/app-publicsafety.jpg)" data-detail="In search-and-rescue, hazmat, and disaster-response scenarios, Shool-ZERO goes in first &mdash; scouting unstable or contaminated environments and streaming live video back to responders before any person is put at risk.">
           <div class="app-card-body">
             <strong>Public Safety &amp; Emergency Response</strong>
             <span>Search &amp; Rescue &bull; Hazmat Recon &bull; Disaster Assessment</span>
           </div>
         </div>
-        <div class="app-card" style="background-image:url(images/app-mining.jpg)">
+        <div class="app-card" style="background-image:url(images/app-mining.jpg)" data-detail="Shool-ZERO inspects tunnels, shafts, and stockpiles, surveying hard-to-reach or unstable areas and flagging hazards, so mine safety teams get the data they need without the exposure.">
           <div class="app-card-body">
             <strong>Mining</strong>
             <span>Tunnel &amp; Shaft Inspection &bull; Hazard Detection &bull; Stockpile Surveys</span>
           </div>
         </div>
-        <div class="app-card" style="background-image:url(images/app-agriculture.jpg)">
+        <div class="app-card" style="background-image:url(images/app-agriculture.jpg)" data-detail="Across fields and remote acreage, Shool-ZERO monitors crop and livestock conditions and provides visual access to areas that are difficult or time-consuming to reach on foot or by vehicle.">
           <div class="app-card-body">
             <strong>Agriculture</strong>
             <span>Crop &amp; Field Monitoring &bull; Livestock Oversight &bull; Remote Site Access</span>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup shown when an industry card above is clicked; content is filled
+         in by js/main.js from the clicked card's own image/title/data-detail,
+         so there's one modal shared by all 8 cards rather than 8 copies. -->
+    <div class="industry-modal" id="industryModal" aria-hidden="true">
+      <div class="industry-modal-backdrop" data-modal-close></div>
+      <div class="industry-modal-panel" role="dialog" aria-modal="true" aria-labelledby="industryModalTitle">
+        <button class="industry-modal-close" type="button" aria-label="Close" data-modal-close>&times;</button>
+        <div class="industry-modal-media" id="industryModalMedia"></div>
+        <div class="industry-modal-body">
+          <p class="eyebrow">Application</p>
+          <h3 id="industryModalTitle"></h3>
+          <p id="industryModalDesc"></p>
+          <a href="#contact" class="btn btn-solid" data-modal-close>Request a Demo <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </div>
