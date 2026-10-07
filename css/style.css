@@ -82,7 +82,7 @@ h2 { font-size: clamp(28px, 4vw, 40px); }
   overflow: hidden;
   pointer-events: none;
 }
-.photo-blend img {
+.photo-blend img, .photo-blend video {
   position: absolute;
   top: 0; right: 0;
   height: 100%;
@@ -409,7 +409,7 @@ body.modal-open { overflow: hidden; }
 .industry-modal-body .btn { margin-top: 8px; }
 
 /* ===================== TECHNOLOGY / WORKFLOW ===================== */
-.tech-photo-blend img {
+.tech-photo-blend img, .tech-photo-blend video {
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 55%, black 100%),
                        linear-gradient(0deg, transparent 0%, black 20%, black 80%, transparent 100%);
   -webkit-mask-composite: source-in;
@@ -580,6 +580,7 @@ body.modal-open { overflow: hidden; }
   .product-photo-blend img,
   .cc-photo-blend img,
   .tech-photo-blend img,
+  .tech-photo-blend video,
   .ft-photo-blend img {
     opacity: 0.28;
   }
